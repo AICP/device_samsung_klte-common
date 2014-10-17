@@ -6,7 +6,6 @@
         <item>Camera</item>
         <item>Navigation</item>
         <item>Gallery</item>
-        <item>VT</item>
         <item>Bypass</item>
     </string-array>
 
@@ -16,7 +15,6 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
-        <item>7</item>
         <item>8</item>
     </string-array>
 

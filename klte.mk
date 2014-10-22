@@ -85,6 +85,17 @@ PRODUCT_PACKAGES += \
     nfc_nci.msm8974 \
     Tag
 
+# F2FS System Tools
+PRODUCT_PACKAGES += \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    setup_fs \
+    e2fsck
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -93,6 +104,26 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.sec.boot.sh \
     ueventd.qcom.rc
+
+PRODUCT_COPY_FILES := \
+    device/samsung/klte-common/fstab/fstab.qcom.all-EXT4:system/extras/fstab/fstab.qcom.all-EXT4 \
+    device/samsung/klte-common/fstab/fstab.qcom.all-F2FS:system/extras/fstab/fstab.qcom.all-F2FS \
+    device/samsung/klte-common/fstab/fstab.qcom.data-F2FS:system/extras/fstab/fstab.qcom.data-F2FS \
+    device/samsung/klte-common/tools/repack-and-flash.sh:system/extras/tools/repack-and-flash.sh \
+    device/samsung/klte-common/tools/format-system.sh:system/extras/tools/format-system.sh \
+    device/samsung/klte-common/tools/kernel/repackimg.sh:system/extras/tools/kernel/repackimg.sh \
+    device/samsung/klte-common/tools/kernel/unpackimg.sh:system/extras/tools/kernel/unpackimg.sh \
+    device/samsung/klte-common/tools/kernel/cleanup.sh:system/extras//tools/kernel/cleanup.sh \
+    device/samsung/klte-common/tools/kernel/authors.txt:system/extras/tools/kernel/authors.txt \
+    device/samsung/klte-common/tools/kernel/bin/aik:system/extras/tools/kernel/bin/aik \
+    device/samsung/klte-common/tools/kernel/bin/busybox:system/extras/tools/kernel/bin/busybox \
+    device/samsung/klte-common/tools/kernel/bin/file:system/extras/tools/kernel/bin/file \
+    device/samsung/klte-common/tools/kernel/bin/lz4:system/extras/tools/kernel/bin/lz4 \
+    device/samsung/klte-common/tools/kernel/bin/magic:system/extras/tools/kernel/bin/magic \
+    device/samsung/klte-common/tools/kernel/bin/mkbootfs:system/extras/tools/kernel/bin/mkbootfs \
+    device/samsung/klte-common/tools/kernel/bin/mkbootimg:system/extras/tools/kernel/bin/mkbootimg \
+    device/samsung/klte-common/tools/kernel/bin/unpackbootimg:system/extras/tools/kernel/bin/unpackbootimg \
+    device/samsung/klte-common/tools/kernel/bin/xz:system/extras/tools/kernel/bin/xz
 
 # Thermal
 PRODUCT_COPY_FILES += \

@@ -85,6 +85,17 @@ PRODUCT_PACKAGES += \
     nfc_nci.msm8974 \
     Tag
 
+# F2FS
+PRODUCT_PACKAGES += \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    setup_fs \
+    e2fsck
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \

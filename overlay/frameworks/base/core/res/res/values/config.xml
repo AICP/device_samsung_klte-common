@@ -162,11 +162,11 @@
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
-    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">true</bool>
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option
+    <bool name="config_intrusiveBatteryLed">true</bool> -->
 
-    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
-    <bool name="config_multiColorBatteryLed">true</bool>
+    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors
+    <bool name="config_multiColorBatteryLed">true</bool> -->
 
 <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
@@ -215,8 +215,8 @@
         <item>10</item>
     </integer-array>
 
-    <!-- Workaround for devices with broken keyboards -->
-    <bool name="config_forceDisableHardwareKeyboard">true</bool>
+    <!-- Workaround for devices with broken keyboards
+    <bool name="config_forceDisableHardwareKeyboard">true</bool> -->
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
@@ -250,8 +250,8 @@
 
     <bool name="config_enableWifiDisplay">true</bool>
 
-    <!-- Panel auto-brightness configuration value -->
-    <integer name="config_panelAutoBrightnessValue">1</integer>
+    <!-- Panel auto-brightness configuration value
+    <integer name="config_panelAutoBrightnessValue">1</integer> -->
 
         <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
@@ -265,12 +265,12 @@
          Left     100
          Bottom   Top + 400
          Right    Display Width - 100
-    -->
+
     <integer-array name="config_smartCoverWindowCoords">
         <item>30</item>
         <item>44</item>
         <item>800</item>
         <item>1036</item>
-    </integer-array>
+    </integer-array> -->
 
 </resources>

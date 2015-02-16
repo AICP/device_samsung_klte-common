@@ -52,6 +52,9 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # CMHW
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 
+# External apps on SD 	37
+TARGET_EXTERNAL_APPS = sdcard1
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 

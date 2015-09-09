@@ -49,6 +49,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
-
-#AICP Device Maintainers
-ro.aicp.maintainer=OptX, semdoc (doc HD)

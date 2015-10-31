@@ -45,6 +45,7 @@ public class KlteRIL extends RIL {
     private static final int RIL_UNSOL_ON_SS_LL = 11055;
     private static final String RIL_VERSION_PROPERTY = "ro.sec_ril.version";
 
+    private Message mPendingGetSimStatus;
     private boolean mIsGsm = false;
     private boolean isLollipopRadio = SystemProperties.getInt(RIL_VERSION_PROPERTY, 44) == 50;
 
@@ -251,6 +252,26 @@ public class KlteRIL extends RIL {
         }
 
         return response;
+    }
+
+    @Override
+    public void
+    getIccCardStatus(Message result) {
+        if (mState != RadioState.RADIO_ON) {
+            mPendingGetSimStatus = result;
+        } else {
+            super.getIccCardStatus(result);
+        }
+    }
+
+    @Override
+    protected void
+    switchToRadioState(RadioState newState) {
+        super.switchToRadioState(newState);
+        if (newState == RadioState.RADIO_ON && mPendingGetSimStatus != null) {
+            super.getIccCardStatus(mPendingGetSimStatus);
+            mPendingGetSimStatus = null;
+        }
     }
 
     @Override

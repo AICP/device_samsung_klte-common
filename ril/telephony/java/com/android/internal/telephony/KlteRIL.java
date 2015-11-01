@@ -49,8 +49,9 @@ public class KlteRIL extends RIL {
     private boolean mIsGsm = false;
     private boolean isLollipopRadio = SystemProperties.getInt(RIL_VERSION_PROPERTY, 44) == 50;
 
-    public KlteRIL(Context context, int networkModes, int cdmaSubscription) {
-        this(context, networkModes, cdmaSubscription, null);
+    public KlteRIL(Context context, int networkMode, int cdmaSubscription) {
+        super(context, networkMode, cdmaSubscription, null);
+        mQANElements = 6;
     }
 
     public KlteRIL(Context context, int preferredNetworkType,

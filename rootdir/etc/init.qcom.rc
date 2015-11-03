@@ -47,8 +47,6 @@ on init
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
-    symlink /external_sd /storage/sdcard1
-    symlink /external_sd /mnt/sdcard1
 
 on fs
     write /sys/devices/msm_sdcc.1/mmc_host/mmc1/power/control on

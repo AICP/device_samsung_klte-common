@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libril_shim
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \

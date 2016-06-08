@@ -105,7 +105,8 @@ PRODUCT_PACKAGES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    libril_shim
+    libril_shim \
+    libprotobuf-cpp-full
 
 # Gello
 PRODUCT_PACKAGES += \
